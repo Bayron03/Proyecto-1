@@ -55,9 +55,9 @@ Solucion=[Asesino,Arma,Motivo,ParteCuerpo,Lugar]
 print(Solucion)
     
 def Iniciar_Variables():
-    global Pistas_Fuerza_Bruta,Pistas_Backtracking,Cantidad_Restricciones,Intentos_Fuerza_Bruta,Intentos_Backracking,Restricciones_Cartas,Sugerencia_Fuerza_Bruta,Sugerencia_Backtracking, Fin_BT,Fin_FB, Pista_Actual_BT,Pista_Actual_FB,Asesino,Arma,Motivo,ParteCuerpo,Lugar
+    global Pistas_Fuerza_Bruta,Pistas_Backtracking,Cantidad_Restricciones,Intentos_Fuerza_Bruta,Intentos_Backracking,Restricciones_Cartas,Sugerencia_Fuerza_Bruta,\
+           Sugerencia_Backtracking, Fin_BT,Fin_FB, Pista_Actual_BT,Pista_Actual_FB,Asesino,Arma,Motivo,ParteCuerpo,Lugar, Solucion
     #Lista_Solucion
-    Solucion=[Asesino,Arma,Motivo,ParteCuerpo,Lugar]
     Pistas_Fuerza_Bruta=[["Mejor amigo(a)","Novio(a)","Vecino(a)","El mensajero","El extraño","Hermanastro(a)","Colega de trabajo"],
             ["Pistola","Cuchillo","Machete","Pala","Bate","Botella","Tubo","Cuerda"],
             ["Venganza","Celos","Dinero","Accidente","Drogas","Robo"],
