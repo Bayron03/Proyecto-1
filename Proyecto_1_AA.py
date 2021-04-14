@@ -52,6 +52,7 @@ ParteCuerpo=Pistas[3][random.randint(0, 5)]
 Lugar=Pistas[4][random.randint(0, 8)]
 #Lista_Solucion
 Solucion=[Asesino,Arma,Motivo,ParteCuerpo,Lugar]
+print(Solucion)
     
 def Iniciar_Variables():
     global Pistas_Fuerza_Bruta,Pistas_Backtracking,Cantidad_Restricciones,Intentos_Fuerza_Bruta,Intentos_Backracking,Restricciones_Cartas,Sugerencia_Fuerza_Bruta,Sugerencia_Backtracking, Fin_BT,Fin_FB, Pista_Actual_BT,Pista_Actual_FB,Asesino,Arma,Motivo,ParteCuerpo,Lugar
@@ -173,7 +174,7 @@ def ventana_Restricciones():
 #R:----.
 #O:Representar la primera pantalla del juego 
 def ventana_Juego():
-    global ventana, Intentos_Fuerza_Bruta, Intentos_Backracking,Asesino, Arma, Motivo, ParteCuerpo, Lugar, Fondo_Juego, Cantidad_Restricciones,Pista_Actual_BT,Pista_Actual_FB
+    global ventana, Intentos_Fuerza_Bruta, Intentos_Backracking,Fondo_Juego, Cantidad_Restricciones,Pista_Actual_BT,Pista_Actual_FB, Solucion
     ventana.geometry("1350x800")
     Fondo=Label(ventana,image=Fondo_Juego).place(x=0,y=0)
     #-----------------------------Intentos-------------------------------------
@@ -226,19 +227,19 @@ def ventana_Juego():
     lbl_imagen10= Label(ventana,image=imagen10).place(x=590,y=250)
 
     #-----------------------------imagenes solucion------------------------------
-    imagen11= PhotoImage(file="Cartas/cartas sospechosos/"+Asesino+".png")
+    imagen11= PhotoImage(file="Cartas/cartas sospechosos/"+Solucion[0]+".png")
     lbl_imagen11= Label(ventana,image=imagen11).place(x=150,y=530)
 
-    imagen12= PhotoImage(file="Cartas/cartas armas/"+Arma+".png")
+    imagen12= PhotoImage(file="Cartas/cartas armas/"+Solucion[1]+".png")
     lbl_imagen12= Label(ventana,image=imagen12).place(x=260,y=530)
     
-    imagen13= PhotoImage(file="Cartas/cartas motivo/"+Motivo+".png")
+    imagen13= PhotoImage(file="Cartas/cartas motivo/"+Solucion[2]+".png")
     lbl_imagen13= Label(ventana,image=imagen13).place(x=370,y=530)
     
-    imagen14= PhotoImage(file="Cartas/cartas parte del cuerpo/"+ParteCuerpo+".png")
+    imagen14= PhotoImage(file="Cartas/cartas parte del cuerpo/"+Solucion[3]+".png")
     lbl_imagen14= Label(ventana,image=imagen14).place(x=480,y=530)
     
-    imagen15= PhotoImage(file="Cartas/cartas lugar/"+Lugar+".png")
+    imagen15= PhotoImage(file="Cartas/cartas lugar/"+Solucion[4]+".png")
     lbl_imagen15= Label(ventana,image=imagen15).place(x=590,y=530)
     #----------------------------Listbox de restricciones------------------------------
     contenedor=crearframe()
